@@ -1,0 +1,32 @@
+body{
+    background-color: whitesmoke;
+}
+
+.title1{
+    font-size: 45px;
+    margin-left: 430px;
+
+}
+.title2{
+    font-size: 30px;
+}
+.title3{
+    font-size: 30px;
+}
+.title4{
+    font-size: 30px;
+    text-align: right;
+}
+.title5{
+    font-size: 30px;
+    text-align: right;
+
+}
+.grid{
+    width: auto;
+    height: auto;
+    border: 2px grey;
+    
+}
+
+

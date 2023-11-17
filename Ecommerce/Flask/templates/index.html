@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-store votre librairie en ligne</title>
+   
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/desktop/style.css')}}" media="screen and (min-width: 1024px) " >
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/desktop/cart.css')}}" media="screen and (min-width: 1024px) " >
+    <link rel="stylesheet" media="screen and (min-width :1024px)" href="{{url_for('static' , filename = 'css/desktop/Navbar.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/mobile/mstyle.css')}}" media="screen and (max-width: 1023px) " >
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/mobile/mnavbar.css')}}" media="screen and (max-width: 1023px) " >
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/mobile/mcart.css')}}" media="screen and (max-width: 1023px) " >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' >
+    <link rel="icon" href="{{url_for('static' , filename = 'img/logo1.png')}}">
+</head>
+    <body>
+        <header>
+
+            <div class="navbar is-responsive" id="navbar">
+                <div class="navbar-brand" id="brand">
+                    <img  src="{{url_for('static' , filename = 'img/logo.png')}}" alt="" class="logo" >
+                </div>
+                <div class="navbar-burger"><button class="burger"><i class="bx bx-menu bx-md"></i></button></div>
+                <div class="navbar-menu">
+                <input id="searchbar" onkeyup="search_book()" type="text"
+                name="search" style="text-indent:17px;" placeholder="Quel livre cherchez-vous ?" >
+                <div class="navbar-start" >
+                    <a class="navbar-item" id="home" href="{{url_for('index')}}"><i class='bx bx-home-alt-2 bx-md' ></i> </a>
+                </div>
+                <div class="navbar-end">
+                    <a class='navbar-item'  id='navbar-item'href="#AIDE">Aide <i class='bx bx-help-circle '></i></a>
+                    <a class='navbar-item'  id='navbar-item'href="#AIDE">Nous contacter <i class='bx bx-phone '></i></a>
+                    
+                </div>
+    
+            </div>
+            </div>
+        
+            
+            
+        
+        </header>
+        <div class="cart">
+            <h2 class="cart-title">Votre panier</h2>
+             <!-- Content -->
+            <div class="cart-content">
+                    <div class="cart-box">
+                        <img src="{{url_for('static', filename='img/Anglais_6e-JD.png')}}" alt="" class="cart-img">
+                        <div class="detail-box">
+                            <div class="cart-product-title">Livre d'anglais 6e</div>
+                            <div class="cart-price" id="2000">2000FCFA</div>
+                            <input type="number"  class="cart-quantity" value="1" min="1" onchange="calculate()">
+                        </div>
+                        <!-- Remove Cart -->
+                        <button type="button" class="trash"><i class='bx bxs-trash-alt cart-remove' ></i></button>
+                      
+                    </div>
+                    <div class="cart-box1">
+                        <img src="{{url_for('static', filename='img/EDHC_6e-JD.png')}}" alt="" class="cart-img1">
+                        <div class="detail-box1">
+                            <div class="cart-product-title1">Livre d'edhc 6e</div>
+                            <div class="cart-price1" id="3400">3400FCFA</div>
+                            <input type="number"  class="cart-quantity1" value="1"  min="1" onchange="calculate()">
+                        </div>
+                        <!-- Remove Cart -->
+                        <button type="button" class="trash1"><i class='bx bxs-trash-alt cart-remove' ></i></button>
+                      
+                    </div>
+                    <div class="cart-box2">
+                        <img src="{{url_for('static', filename='img/HG_6e-JD.png')}}" alt="" class="cart-img2">
+                        <div class="detail-box2">
+                            <div class="cart-product-title2">Livre d'HG 6e</div>
+                            <div class="cart-price2" id="3000">3000FCFA</div>
+                            <input type="number"  class="cart-quantity2" value="1"  min="1" onchange="calculate()">
+                        </div>
+                        <!-- Remove Cart -->
+                        <button type="button" class="trash2"><i class='bx bxs-trash-alt cart-remove' ></i></button>
+                      
+                    </div>
+                   
+                
+            </div>
+             <!-- Total -->
+             <div class="total">
+               <div class="total-title">Total</div>
+               <div class="total-price">0FCFA</div>
+             </div>
+             <btn class="btn-buy">Finaliser vos commandes</btn>
+             <!-- Buy Button -->
+             
+             <!-- Cart Close -->
+             <button type="button"><i class='bx bx-x' id="close-cart"></i></button>
+           </div>
+           
+      
+
+        <section>
+            
+           
+                <div class="row">
+                    <div class="ad-link">
+                        <a href="" >
+                            <img src="{{url_for('static' , filename = '/img/ad1.png')}}" alt="" class="ad-img">
+                        </a>
+                    </div>
+                </div>
+           
+            <button class="left-arrow"><i class='bx bx-chevron-left  bx-lg'></i></button>
+            <button class="right-arrow"> <i class='bx bx-chevron-right bx-lg' ></i></button>
+
+        </section>
+       
+        
+
+        <section class="shop container">
+            <h1 class="section-title">Nouveautés</h1>
+            <!-- Content -->
+            <div class="shop-content">
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="{{url_for('static', filename='img/Anglais_6e-JD.png')}}" alt="" class="product-img">
+                    <h2 class="product-title">Livre d'Anglais 6e</h2>
+                    <span class="price">2000FCFA</span>
+                        <button class="add-cart"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+                 <!-- Box 2 -->
+                 <div class="product-box">
+                    <img src="{{url_for('static', filename='img/EDHC_6e-JD.png')}}"  alt="" class="product-img">
+                    <h2 class="product-title">Livre d'EDHC 6e</h2>
+                    <span class="price">2000FCFA</span>
+                        <button class="add-cart1"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+                 <!-- Box 3 -->
+                 <div class="product-box">
+                    <img src="{{url_for('static', filename='img/HG_6e-JD.png')}}"  alt="" class="product-img">
+                    <h2 class="product-title">Livre d'Hist-Geo 6e</h2>
+                    <span class="price">2000FCFA</span>
+                        <button class="add-cart2"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+            </div>   
+        </section>
+        
+        
+        <section class="shop container">
+            <h1 class="section-title-2">Meilleures ventes</h1>
+            <!-- Content -->
+            <div class="shop-content1">
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="{{url_for('static', filename='img/Anglais_6e-JD.png')}}" alt="" class="product-img">
+                    <h2 class="product-title">Livre d'Anglais 6e</h2>
+                    <span class="price">2000FCFA</span>
+                    <button class="add-cart"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+                 <!-- Box 2 -->
+                 <div class="product-box">
+                    <img src="{{url_for('static', filename='img/EDHC_6e-JD.png')}}"  alt="" class="product-img">
+                    <h2 class="product-title">Livre d'EDHC 6e</h2>
+                    <span class="price">2000FCFA</span>
+                    <button class="add-cart"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+                 <!-- Box 3 -->
+                 <div class="product-box">
+                    <img src="{{url_for('static', filename='img/HG_6e-JD.png')}}"  alt="" class="product-img">
+                    <h2 class="product-title">Livre d'Hist-Geo 6e</h2>
+                    <span class="price">2000FCFA</span>
+                    <button class="add-cart"><i class='bx bx-shopping-bag add-cart'></i></button>
+                </div>
+            </div>   
+        </section>
+
+
+
+        <section >
+             <h1 class="section-title-3">Catégories</h1>
+             <div class="container">
+                 
+                  <div class="row">
+                  
+                    <div class="col-1">
+                        <a href="{{url_for('first')}}"> <img src="{{url_for('static' , filename ='img/image_livre1ercycle.png')}}"></a>
+                    </div>
+
+                    <div class="col-2">
+                    <a href="{{url_for('second')}}"> <img src="{{url_for('static', filename ='img/image_livre_2ndcycle.png')}} "></a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="Romans&Autres.html"> <img src="{{url_for('static' , filename ='img/image_romans.png')}}"></a>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </section>
+
+        <button type="button" id='cart-btn' class="navbar-item">
+            <i class='bx bx-shopping-bag bx-lg' id="cart-icon"></i>
+        </button>
+        
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <img  src="{{url_for('static' , filename = 'img/logo1.png')}}" alt=""  >
+                <h1>Une filiale de l'entreprise <strong>E-services©</strong> tous droits réservés</h1>
+                    <p> 
+                    <strong> Pourquoi acheter des livres sur notre site ?</strong>
+                    <br>Acheter mais pas dépenser <br>
+                    Vous pouvez acheter des livres, manuels scolaire et romans
+                    sans pour autant se ruiner
+                    <br>Notre site vous propose des livres de premier choix mais <br>
+                    aussi des livres déjà utilisés a prix réduit <br>
+                    L'important c'est la qualité des informations du livre <br>
+                    </p>
+            </div>
+
+        </footer>
+
+        <script src="{{url_for('static', filename = '/js/main.js')}}"></script>
+        
+         
+         
+         
+         
+         
+        
+
+        
+        
+        
+
+        
+
+
+
+    </body>
+</html>

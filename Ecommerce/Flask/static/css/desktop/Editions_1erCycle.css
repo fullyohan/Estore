@@ -1,0 +1,77 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,600;1,300&family=Roboto:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  }
+:root{
+  --main-color: red;
+  --text-color: rgb(245, 7, 7);
+  --bg-color: rgb(255, 255, 255);
+}
+
+
+
+body{
+  font-family : 'Borel', cursive ;
+  background-color: whitesmoke;
+}
+
+
+/* Header */
+
+/* Cart */
+
+.row{
+  display: inline-flex;
+  margin-left: 100px;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+.bold {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+
+
+.col-1{
+  margin-left: 20px;
+  min-width: 200px;
+
+}
+.col-1 img{
+  width: 200px;
+  height : 200px;
+  border-radius: 50px;
+}
+.col-1 img:hover{
+  padding: 12px;
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+}
+
+
+
+.col-2{
+  min-width: 200px;
+  margin-left: 20px;
+}
+.col-2 img{
+  width: 200px;
+  height : 200px;
+  border-radius: 50px;
+}
+.col-2 img:hover{
+  padding: 12px;
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+}
+
+
+

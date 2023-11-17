@@ -1,0 +1,74 @@
+:root{
+    --main-color: red;
+    --text-color: rgb(245, 7, 7);
+    --bg-color: rgb(255, 255, 255);
+}
+
+#navbar{
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+#searchbar{
+  border-radius: 115px;
+  width: 450px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  left: 30%;
+  background-image: url('/static/img/search.png');
+  background-repeat: no-repeat;
+  background-size: 36px 38px;
+  background-position: left;
+  border: none;
+
+}
+#navbar-item{
+  color: white;
+  font-weight: bold;
+  font-size: 16px; 
+  background-color: red;
+  
+}
+  
+#home{
+  position: absolute;
+  left: 260px;
+  top: 20px;
+  color: white;
+
+}
+#home:hover{
+  background-color: red;
+  
+
+}
+
+#cart-text {
+    color: white;
+  }
+input[type ="text"]{
+    font-size: 20px;
+    text-align: center;
+
+}
+#cart-icon{
+  color: white;
+}
+
+#brand{
+  height: 60px;
+  width: 100px;
+}
+
+.burger{
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+

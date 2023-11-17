@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre du 2nd Cycle</title>
+    <link rel="stylesheet" media="screen and (min-width :956px)" href="{{url_for('static' , filename = 'css/desktop/Editions_2ndCycle.css')}}">
+    <link rel="stylesheet" media="screen and (max-width: 957 px)" href="{{url_for('static' , filename = 'css/desktop/1erCycle_style.css')}}">
+    <link rel="icon" href="img/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    
+        <!-- Nav -->
+        <header>
+
+            <div class="navbar " id="navbar">
+                <div class="navbar-brand">
+                    <img  src="{{url_for('static' , filename = 'img/logo1.png')}}" alt=""  >
+                </div>
+                <input id="searchbar" onkeyup="search_book()" type="text"
+                name="search" style="text-indent:17px;" placeholder="Quel livre cherchez-vous ?">
+                <div class="navbar-start" >
+                    <a class="navbar-item" id="home" href="{{url_for('index')}}"><i class='bx bx-home-alt-2 bx-md' ></i></a>
+                </div>
+                <div class="navbar-end">
+                    <a class='navbar-item' href="#AIDE"><strong>Aide <i class='bx bx-help-circle '></i></strong></a>
+                    <a class="navbar-item"><button type="button" id='cart-btn'>
+                    <strong>Panier  </strong> <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                    </button></a>
+                </div>
+
+            </div>
+       
+
+    </header>
+    <h1 class="bold">Editions</h1>
+    <section>
+                <div class="container">
+                    <div class="row">
+                    
+                        <div class="col-1">
+                            <a href="{{url_for('JD')}}"><img src="{{url_for('static' , filename ='img/JD.jpg')}}"></a>
+        
+                        </div>
+        
+                        <div class="col-2">
+                            <a href=""><img src="{{url_for('static', filename ='img/supernova.jpg')}} "></a>
+                        </div>
+        
+                    
+                    </div>
+
+                </div>
+        
+
+    
+    </section>

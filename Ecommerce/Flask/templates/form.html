@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="{{url_for( 'static', filename='css/desktop/form.css')}}">
+    
+</head>
+<body>
+    
+    <h1 class="text">Veuillez remplir le formulaire ci-dessous</h1>
+    <form action="http://localhost:5000/treatment"  method="post" class="form">
+        <label for="">Nom :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="nom" required> 
+        <br>
+        <br>
+        <label for="">Prénoms :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="prenom" required> 
+        <br>
+        <br>
+        <label for="">Adresse E-mail :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="email" name="email" required> 
+        <br>
+        <br>
+        <label for="">Numéro de téléphone : </label><input type="text" name="tel" required>
+        <br>
+        <br>
+       <input type="checkbox" name=""   required class="checkbox"><label for="" class="conditions">Veuillez valider <a href="#">nos conditions d'utilisation</a></label> <br>
+        <input type="submit"  value="S'inscrire" id="btn">
+    </form>
+    <div class="block">
+
+    </div>
+
+    
+    
+</body>
+</html>

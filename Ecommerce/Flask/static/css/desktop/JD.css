@@ -1,0 +1,79 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,600;1,300&family=Roboto:wght@700&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+:root{
+    --main-color: red;
+    --text-color: rgb(245, 7, 7);
+    --bg-color: rgb(255, 255, 255);
+  }
+
+
+body{
+  
+  font-family : 'Borel', cursive ;
+  background-color: whitesmoke;
+}
+
+
+/* Header */
+
+/* Cart */
+
+
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 900px;
+  text-align: center;
+  
+}
+
+.shop {
+  margin-top: 2rem;
+}
+/* Shop Content */
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+  gap: 6.5rem;
+}
+.product-box {
+  position: relative;
+}
+.product-box:hover {
+  padding: 18px;
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+}
+.product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 630;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.price{
+  font-weight: 500;
+}
+.add-cart{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 18px;
+  cursor: pointer;
+}
+.add-cart:hover{
+  background: hsl(249, 32%, 17%);
+}

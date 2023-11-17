@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre du 1er Cycle</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/desktop/Editions_1erCycle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/desktop/Navbar.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/desktop/cart.css')}}" >
+    <link rel="icon" href="img/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+   
+        <!-- Nav -->
+        <header>
+
+            <div class="navbar" id="navbar">
+                <div class="navbar-brand">
+                    <img  src="{{url_for('static' , filename = 'img/logo1.png')}}" alt=""  >
+                </div>
+                <input id="searchbar" onkeyup="search_book()" type="text"
+                name="search" style="text-indent:17px;" placeholder="Quel livre cherchez-vous ?">
+                <div class="navbar-start" >
+                    <a class="navbar-item" id="home" href="{{url_for('index')}}"><i class='bx bx-home-alt-2 bx-md' ></i></a>
+                </div>
+                <div class="navbar-end">
+                    <a class='navbar-item'  id='navbar-item'href="#AIDE">Aide <i class='bx bx-help-circle '></i></a>
+                  
+                </div>
+   
+            </div>
+       
+   
+    </header>
+     
+    <div class="cart">
+        <h2 class="cart-title">Votre commande</h2>
+         <!-- Content -->
+        <div class="cart-content">
+                <div class="cart-box">
+                    <img src="{{url_for('static', filename='img/Anglais_6e-JD.png')}}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Livre d'anglais 6e</div>
+                        <div class="cart-price">2000FCFA</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <!-- Remove Cart -->
+                    <button type="button" class="trash"><i class='bx bxs-trash-alt cart-remove' ></i></button>
+                  
+                </div>
+            
+        </div>
+         <!-- Total -->
+         <div class="total">
+           <div class="total-title">Total</div>
+           <div class="total-price">0FCFA</div>
+         </div>
+         <a href='' class="btn-buy">Finaliser votre commande</a>
+         <!-- Buy Button -->
+         
+         <!-- Cart Close -->
+         <button type="button"><i class='bx bx-x' id="close-cart"></i></button>
+       </div>
+     <h1 class="bold">Editions</h1>
+        <section>
+                    <div class="container">
+                        <div class="row">
+                        
+                            <div class="col-1">
+                                <a href="{{url_for('JD')}}"><img src="{{url_for('static' , filename ='img/JD.jpg')}}"></a>
+            
+                            </div>
+            
+                            <div class="col-2">
+                                <a href=""><img src="{{url_for('static', filename ='img/supernova.jpg')}} "></a>
+                            </div>
+            
+                        
+                        </div>
+
+                    </div>
+            
+
+        
+        </section>
+        <button type="button" id='cart-btn' class="navbar-item">
+            <i class='bx bx-shopping-bag bx-lg' id="cart-icon"></i>
+        </button>
+        <script src="{{url_for('static', filename = '/js/main.js')}}"></script>
+     
